@@ -1,0 +1,77 @@
+#include<stdio.h>
+
+int main()
+{
+	//type declaration for integer and character variable
+	
+	char again;
+	
+	//General rules of Games
+	printf("It's a matchsticks Game.\n");
+	printf("Here are rules how it works\n\n\n");
+	printf("There are altogether 21 matchsticks\n");
+	printf("You and I are going to play until all the matchisticks finishes\n");
+	printf("Whoever picks the last remaining matchsticks, loses the game!\n\n");
+	
+	
+	do
+	{
+		
+		int matchsticks=21, userpick, computerpick;
+		int j;
+		
+		printf("\n\nLet's start our game\n");
+		printf("You go first. Pick matchsticks in between (1-4)\n");
+	
+	//Loop control instruction 
+	while(matchsticks>=1)
+	{
+		scanf("%d",&userpick);
+		printf("You picked %d matchsticks\n\n",userpick);
+			
+		//Condition to check the last remaining matchsticks
+		if(matchsticks==1)
+		{
+			printf("You just picked remaining last matchsticks. You lost the Game\n\n");
+			
+			for(j=0;j<237;j++)
+			printf("%c",43);
+			
+			printf("\n\nLet's try this again!\n");
+			break;
+		}
+		
+		//Decision control instruction to check whether user violated the rule or not
+		if(userpick>4)
+		{
+			printf("Invalid pick. Try again!\n");
+			printf("Pick another number from 1-4\n");
+		}
+		else
+		{
+			//conditions for computer pick.There is logic why I subtracted 5 from userpick. Doing this results 5 picks in one round always. So that the 
+			//last to pick will always be the users
+			 
+			computerpick=5-userpick;
+			matchsticks=matchsticks-userpick-computerpick;
+			
+			printf("It's my turn now. Let me pick matchsticks\n\n");
+			
+			//since computer picks on its own!
+			printf("I picked %d matchsticks\n\n",computerpick);
+			
+			printf("Please pick the matchsticks that exists from the remaining number\n");
+			printf("There are %d matchsticks remaining now. Go ahead!\n",matchsticks);
+			printf("It's your turn again\n");
+			
+					
+		}
+	
+		
+	}
+	printf("You want to play this game again?\n");
+	printf("Enter y for Yes and n for No");
+	scanf(" %c",&again);
+	}while(again == 'y');
+		
+}
