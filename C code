@@ -20,7 +20,6 @@ int main()
 		int matchsticks=21, userpick, computerpick;
 		int j;
 		
-		printf("\n\nLet's start our game\n");
 		printf("You go first. Pick matchsticks in between (1-4)\n");
 	
 	//Loop control instruction 
