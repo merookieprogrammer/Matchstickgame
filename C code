@@ -35,8 +35,6 @@ int main()
 			
 			for(j=0;j<237;j++)
 			printf("%c",43);
-			
-			printf("\n\nLet's try this again!\n");
 			break;
 		}
 		
@@ -68,7 +66,7 @@ int main()
 	
 		
 	}
-	printf("You want to play this game again?\n");
+	printf("Do you want to play this game again?\n");
 	printf("Enter y for Yes and n for No");
 	scanf(" %c",&again);
 	}while(again == 'y');
